@@ -4,6 +4,7 @@ export const fetchPosts = () => dispatch => {
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(res => res.json())
       .then(posts =>
+        // dispatch an action heard by the Reducer
         dispatch({
           type: FETCH_POSTS,
           payload: posts
@@ -21,6 +22,7 @@ export const fetchPosts = () => dispatch => {
     })
       .then(res => res.json())
       .then(post =>
+        // dispatch an action heard by the Reducer
         dispatch({
           type: NEW_POST,
           payload: post

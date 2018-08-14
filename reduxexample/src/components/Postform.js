@@ -63,4 +63,7 @@ PostForm.propTypes = {
     createPost: PropTypes.func.isRequired
 };
 
+//Connect allows retrieving data from the store by obtaining its current state
+    // and/or changing it by dispatching an action,
+    // here, we're linked to the store so we can dispatch the NEW_POST action
 export default connect(null, { createPost })(PostForm);

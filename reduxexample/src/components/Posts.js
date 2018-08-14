@@ -31,7 +31,7 @@ class Posts extends Component {
     }
 }
 
-Posts.PropTypes = {
+Posts.propTypes = {
     fetchPosts: PropTypes.func.isRequired,
     posts: PropTypes.array.isRequired,
     newPost: PropTypes.object
@@ -42,5 +42,7 @@ const mapStateToProps = state => ({
     newPost: state.posts.item
 });
 
-
+//Connect allows retrieving data from the store by obtaining its current state
+    // and/or changing it by dispatching an action,
+    // here, we're linked to the store so we can dispatch the FETCH_POSTS action
 export default connect(mapStateToProps, { fetchPosts })(Posts);

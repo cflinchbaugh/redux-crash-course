@@ -10,12 +10,12 @@ export default function(state = initialState, action) {
     case FETCH_POSTS:
       return {
         ...state,
-        items: action.payload
+        items: action.payload       // note items is plural
       };
     case NEW_POST:
       return {
         ...state,
-        item: action.payload
+        item: action.payload        // note items is singular, different from FETCH_POSTS
       };
     default:
       return state;
